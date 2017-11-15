@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://rawgit.com/kairosinc/Kairos-SDK-Javascript/master/kairos.js"></script>
+<script>
+  var kairos = new Kairos("8dd9a1c0", "ead30fdfff16124a9068c9b6ec7f59d");
+
+  function myDetectCallback(response) {
+    console.log(response.responseText);
+  }
+
+  // (2) pass your callback to the function
+  kairos.viewGalleries(myDetectCallback);
+</script>
+</body>
+</html>

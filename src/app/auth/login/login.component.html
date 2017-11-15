@@ -1,0 +1,18 @@
+<div class="card login-card">
+  <form class="card-body" [formGroup]="form" (submit)="formSubmitHandler($event)">
+    <h4 class="card-title text-center"> Kairos UI</h4>
+
+    <adm-input-container class="form-group" label="APP ID" [control]="form.get('app_id')">
+      <input type="text" adm formControlName="app_id">
+    </adm-input-container>
+
+    <adm-input-container class="form-group" label="APP KEY" [control]="form.get('app_key')">
+      <input type="text" adm formControlName="app_key">
+    </adm-input-container>
+
+
+    <adm-input-container>
+      <button type="submit" class="btn btn-primary float-right">Proceed</button>
+    </adm-input-container>
+  </form>
+</div>

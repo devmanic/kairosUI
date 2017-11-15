@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
+import { ToastService } from 'admanic-ui';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-kairos-ui',
+  template: `
+    <router-outlet></router-outlet>`
 })
 export class AppComponent {
-  title = 'app';
+  constructor(toastManager: ToastService, vcr: ViewContainerRef) {
+    toastManager.setRootViewContainerRef(vcr);
+  }
 }

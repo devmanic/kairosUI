@@ -20,6 +20,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Build & host GitHub pages
+## Build & host on GitHub pages
 
 Run `npm run build:prod:gh` to build the project. The build artifacts will be stored in the `docs/` directory. `/kairosUI/` will be set as base url. Then you should push your changes. ([more info](https://github.com/angular/angular-cli/wiki/stories-github-pages))

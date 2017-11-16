@@ -22,4 +22,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Build & host GitHub pages
 
-Run `npm run build:prod:gh` to build the project. The build artifacts will be stored in the `docs/` directory. `/kairosUI/` will be set as base url. Then you should push your changes.
+Run `npm run build:prod:gh` to build the project. The build artifacts will be stored in the `docs/` directory. `/kairosUI/` will be set as base url. Then you should push your changes. ([more info](https://github.com/angular/angular-cli/wiki/stories-github-pages))

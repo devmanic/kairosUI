@@ -25,6 +25,10 @@ export class CredentialsService {
     return this.isValid(this.credentials);
   }
 
+  clear(){
+    localStorage.removeItem(this.localStorageKey);
+  }
+
   private isValid(data: ICreds) {
     return !!data && isObject(data) && data.hasOwnProperty('app_id') && isString(data.app_id) && data.hasOwnProperty('app_key') && isString(data.app_key) && data.app_key.length > 3 && data.app_id.length > 3;
   }

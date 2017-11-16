@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: 'gallery-component',
   template: `
-    <router-outlet></router-outlet>
+    <app-navbar></app-navbar>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
   `
 })
 

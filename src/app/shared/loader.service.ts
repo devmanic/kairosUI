@@ -1,7 +1,8 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+
 @Injectable()
-export default class LoaderService {
+export class LoaderService {
   private _isShow: BehaviorSubject<boolean> = new BehaviorSubject(false);
   isShow: Observable<boolean> = this._isShow.asObservable();
 

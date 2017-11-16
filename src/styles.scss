@@ -1,1 +1,9 @@
 @import "~bootstrap/scss/bootstrap.scss";
+
+.container-fluid {
+  max-width: 1280px;
+}
+
+.list-group {
+  margin-bottom: 30px;
+}

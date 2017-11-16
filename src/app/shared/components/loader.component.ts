@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import LoaderService from "../loader.service";
+import { Component } from '@angular/core';
+import { LoaderService } from '../loader.service';
 
 @Component({
   selector: 'app-loader',
@@ -10,11 +10,14 @@ import LoaderService from "../loader.service";
   `,
   styles: [`
     .apploader {
-      height: 4px;
+      height: 3px;
       width: 100%;
-      position: relative;
+      position: fixed;
       overflow: hidden;
       background-color: #ddd;
+      left: 0;
+      right: 0;
+      z-index: 1;
     }
 
     .apploader:before {

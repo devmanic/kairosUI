@@ -1,5 +1,5 @@
-import { Component, ViewContainerRef } from "@angular/core";
-import { ToastService } from "admanic-ui";
+import { Component, ViewContainerRef } from '@angular/core';
+import { ModalManagerService, ToastService } from 'admanic-ui';
 
 @Component({
   selector: 'app-kairos-ui',
@@ -10,7 +10,8 @@ import { ToastService } from "admanic-ui";
     </div>`
 })
 export class AppComponent {
-  constructor(toastManager: ToastService, vcr: ViewContainerRef) {
+  constructor(toastManager: ToastService, vcr: ViewContainerRef, modalManager: ModalManagerService) {
     toastManager.setRootViewContainerRef(vcr);
+    modalManager.setRootViewContainerRef(vcr);
   }
 }

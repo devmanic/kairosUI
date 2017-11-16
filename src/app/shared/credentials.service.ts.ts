@@ -25,7 +25,7 @@ export class CredentialsService {
     return this.isValid(this.credentials);
   }
 
-  clear(){
+  clear() {
     localStorage.removeItem(this.localStorageKey);
   }
 

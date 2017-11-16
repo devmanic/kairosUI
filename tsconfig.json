@@ -1,19 +1,50 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
+    "target": "es5",
+    "module": "es2015",
     "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "allowSyntheticDefaultImports": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "baseUrl": "./src",
+    "removeComments": false,
+    "skipLibCheck": true,
+    "paths": {
+      "@angular/*": ["node_modules/@angular/*"]
+    },
     "lib": [
-      "es2017",
+      "es2015",
       "dom"
-    ]
+    ],
+    "types": [
+      "node",
+      "jquery",
+      "hammerjs"
+    ],
+    "typeRoots" : ["./node_modules/@types"]
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "public",
+    "build",
+    "backend",
+    "src/**/*.spec.ts",
+    "src/**/*.e2e.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
   }
 }

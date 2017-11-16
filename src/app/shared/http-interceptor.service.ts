@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import {
   HttpErrorResponse,
   HttpEvent,
@@ -6,12 +6,12 @@ import {
   HttpInterceptor,
   HttpRequest,
   HttpResponse
-} from "@angular/common/http";
-import { CredentialsService } from "./credentials.service.ts";
-import { Observable } from "rxjs/Observable";
-import { Router } from "@angular/router";
-import { ToastService } from "admanic-ui";
-import LoaderService from "./loader.service";
+} from '@angular/common/http';
+import { CredentialsService } from './credentials.service.ts';
+import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
+import { ToastService } from 'admanic-ui';
+import { LoaderService } from './loader.service';
 
 @Injectable()
 export class SDKInceptor implements HttpInterceptor {
@@ -43,9 +43,9 @@ export class SDKInceptor implements HttpInterceptor {
       }
     }, (err: any) => {
       this.loaderService.hide();
-      if (err instanceof HttpErrorResponse {
+      if (err instanceof HttpErrorResponse) {
         this.toastManager.error(err.message);
-        if (err.status === 403 || err.status === 0) { // todo: check if it necessary
+        if (err.status === 403 || err.status === 0) {
           this.router.navigate(['./login']);
         }
       }

@@ -1,10 +1,8 @@
-import { HomeComponent } from './home/home.component';
-
 export const AppRoutes = [
   {
     path: '',
-    redirectTo: '/gallery',
+    redirectTo: '/gallery/list',
     pathMatch: 'full'
-    // component: HomeComponent
-  }
+  },
+  {path: '**', redirectTo: 'gallery/404'}
 ];
